@@ -1,0 +1,6 @@
+[submodule "names-lib"]
+	path = names-lib
+	url = https://github.com/treyhunner/names.git
+[submodule "haikunator-lib"]
+	path = haikunator-lib
+	url = https://github.com/Atrox/haikunatorpy.git
