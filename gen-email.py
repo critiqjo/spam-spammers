@@ -1,7 +1,10 @@
 #!/bin/python2
 
+from __future__ import print_function
+from sys import stderr
+
 from haikunator import Haikunator
-from random import randrange
+from random import randrange, lognormvariate
 from names import get_first_name
 from urllib import quote as urlquote
 
@@ -35,7 +38,10 @@ if randrange(3) < 2:
 else:
     user += comps[1]
 
-if randrange(4) < 3:
+lnvar = lognormvariate(2.5, 0.4)
+#print(str(len(user)) + " " + str(lnvar), file=stderr)
+
+if len(user) < lnvar:
     if randrange(10) == 1:
         user += '.'
     user += comps[2]
